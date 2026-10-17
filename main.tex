@@ -2,102 +2,85 @@
 % Compile with: pdflatex main.tex
 \documentclass[10pt,a4paper]{article}
 
-\usepackage[a4paper,top=1.45cm,bottom=1.5cm,left=1.65cm,right=1.65cm]{geometry}
+\usepackage[a4paper,top=1.55cm,bottom=1.55cm,left=1.85cm,right=1.85cm]{geometry}
 \usepackage[utf8]{vietnam}
 \usepackage{xcolor}
 \usepackage{enumitem}
+\usepackage{titlesec}
 \usepackage{hyperref}
 
-\definecolor{navy}{HTML}{142B4A}
-\definecolor{teal}{HTML}{087E8B}
-\definecolor{body}{HTML}{263445}
-\definecolor{muted}{HTML}{687789}
-\definecolor{line}{HTML}{D9E1E8}
+\definecolor{navy}{HTML}{182E4B}
+\definecolor{accent}{HTML}{287D85}
+\definecolor{body}{HTML}{253447}
+\definecolor{muted}{HTML}{687586}
+\definecolor{rule}{HTML}{C9D2DC}
 
 \hypersetup{
   colorlinks=true,
-  urlcolor=teal,
-  linkcolor=teal,
+  urlcolor=accent,
+  linkcolor=accent,
   pdfauthor={Đoàn Văn Tuyền},
   pdftitle={Doan Van Tuyen | AI Engineer}
 }
 \urlstyle{same}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
+\setlength{\parskip}{2pt}
 \renewcommand{\familydefault}{\sfdefault}
-\color{body}
-\setlist[itemize]{leftmargin=1.15em,itemsep=2pt,topsep=3pt,parsep=0pt}
+\setlist[itemize]{leftmargin=1.35em,itemsep=1pt,topsep=2pt,parsep=0pt}
 
-% Replace bracketed prompts with verified details before sending this CV.
+\titleformat{\section}{\large\bfseries\color{navy}}{}{0pt}{}[\vspace{-2pt}\color{rule}\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{5pt}
+
+% Replace bracketed prompts with verified information before sending this CV.
 \newcommand{\prompt}[1]{\textcolor{muted}{[#1]}}
-\newcommand{\cvsection}[1]{%
-  \vspace{10pt}%
-  {\normalsize\bfseries\color{navy}\MakeUppercase{#1}}\par
-  \vspace{2pt}{\color{teal}\rule{1.35cm}{1.25pt}}\par\vspace{4pt}%
-}
-\newcommand{\role}[4]{%
+\newcommand{\entry}[4]{%
   \textbf{#1}\hfill{\small\color{muted}#2}\par
-  {\small\color{teal}#3}\hfill{\small\color{muted}#4}\par
+  {\color{accent}#3}\hfill{\small\color{muted}#4}\par
 }
 
 \begin{document}
 
-% Header
-\begin{minipage}[t]{0.57\textwidth}
-  {\small\bfseries\color{teal}\MakeUppercase{AI Engineer}}\\[4pt]
-  {\fontsize{27}{30}\selectfont\bfseries\color{navy} Đoàn Văn Tuyền}\\[4pt]
-  {\normalsize\color{body}Robotics \textbar\ Embodied Intelligence}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.39\textwidth}
-  \raggedleft\small
-  \href{mailto:vant47548@gmail.com}{vant47548@gmail.com}\\[2pt]
-  \href{tel:0349468433}{0349468433}\quad\textcolor{line}{|}\quad Ha Noi, Viet Nam\\[2pt]
-  \href{https://www.linkedin.com/in/tuyendoanvan/}{LinkedIn}\quad\textcolor{line}{|}\quad
-  \href{https://github.com/Tuyen230605}{GitHub}
-\end{minipage}
+{\fontsize{26}{30}\selectfont\bfseries\color{navy} Đoàn Văn Tuyền}\par
+\vspace{1pt}
+{\large\color{accent} AI Engineer}\quad{\color{muted}|}\quad
+{\normalsize\color{body}Robotics \& Embodied Intelligence}\par
+\vspace{6pt}
+{\small
+  \href{mailto:vant47548@gmail.com}{vant47548@gmail.com}\quad{\color{rule}|}\quad
+  \href{tel:0349468433}{0349468433}\quad{\color{rule}|}\quad
+  Ha Noi, Viet Nam\\[2pt]
+  \href{https://www.linkedin.com/in/tuyendoanvan/}{linkedin.com/in/tuyendoanvan}
+  \quad{\color{rule}|}\quad
+  \href{https://github.com/Tuyen230605}{github.com/Tuyen230605}
+}\par
+\vspace{5pt}
+{\color{accent}\rule{\textwidth}{1.2pt}}
 
-\vspace{9pt}
-{\color{teal}\rule{\textwidth}{1.5pt}}
-
-\cvsection{Profile}
+\section{Profile}
 AI Engineer with a long-term interest in robotics and embodied intelligence, especially AI systems that perceive, reason, and act in the physical world.
 
-\vspace{2pt}
-\begin{minipage}[t]{0.615\textwidth}
-  \cvsection{Experience}
-  \role{\prompt{Job Title}}{\prompt{Dates}}{\prompt{Company / Organization}}{\prompt{Location}}
-  \begin{itemize}
-    \item \prompt{Describe your contribution and a measurable result.}
-    \item \prompt{Add another verified accomplishment or remove this bullet.}
-  \end{itemize}
+\section{Experience}
+\entry{\prompt{Job Title}}{\prompt{Dates}}{\prompt{Company / Organization}}{\prompt{Location}}
+\begin{itemize}
+  \item \prompt{Add a concise accomplishment and its measurable result.}
+  \item \prompt{Add another relevant result or remove this bullet.}
+\end{itemize}
 
-  \cvsection{Selected Projects}
-  \role{\prompt{Project Name}}{\prompt{Year}}{\prompt{Role / Project Type}}{\prompt{Link}}
-  \begin{itemize}
-    \item \prompt{Summarize the problem, your approach, tools used, and outcome.}
-  \end{itemize}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.335\textwidth}
-  \cvsection{Technical Skills}
-  \textbf{Programming}\\[-1pt]
-  \prompt{Languages}\par\vspace{5pt}
-  \textbf{AI / ML}\\[-1pt]
-  \prompt{Frameworks and methods}\par\vspace{5pt}
-  \textbf{Engineering}\\[-1pt]
-  \prompt{Tools and platforms}\par\vspace{5pt}
-  \textbf{Robotics}\\[-1pt]
-  \prompt{ROS, simulation, control, etc.}
+\section{Selected Projects}
+\entry{\prompt{Project Name}}{\prompt{Year}}{\prompt{Role / Project Type}}{\prompt{Repository or demo}}
+\begin{itemize}
+  \item \prompt{Summarize the problem, your contribution, tools used, and outcome.}
+\end{itemize}
 
-  \cvsection{Education}
-  \textbf{\prompt{Degree / Program}}\\[-1pt]
-  {\small\color{teal}\prompt{University}}\\[-1pt]
-  {\small\color{muted}\prompt{Years / Graduation}}
+\section{Education}
+\entry{\prompt{Degree / Program}}{\prompt{Years}}{\prompt{University}}{\prompt{City, Country}}
+\prompt{Relevant coursework, thesis, or honors (optional).}
 
-  \cvsection{Interests}
-  Robotics\\
-  Embodied intelligence\\
-  \prompt{Specific areas}
-\end{minipage}
+\section{Technical Skills}
+\textbf{Programming:} \prompt{Languages}\\
+\textbf{AI / ML:} \prompt{Frameworks and methods}\\
+\textbf{Engineering:} \prompt{Tools and platforms}\\
+\textbf{Robotics:} \prompt{ROS, simulation, control, etc.}
 
 \end{document}
