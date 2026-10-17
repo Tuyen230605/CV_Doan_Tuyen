@@ -1,0 +1,87 @@
+% !TEX program = pdflatex
+% Compile with pdfLaTeX: pdflatex main.tex
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[a4paper,top=1.45cm,bottom=1.45cm,left=1.7cm,right=1.7cm]{geometry}
+\usepackage[utf8]{vietnam}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\definecolor{ink}{HTML}{172B4D}
+\definecolor{accent}{HTML}{087E8B}
+\definecolor{muted}{HTML}{526174}
+\definecolor{rule}{HTML}{D8E0E8}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdfauthor={Đoàn Văn Tuyền},
+  pdftitle={Doan Van Tuyen | AI Engineer}
+}
+\urlstyle{same}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\renewcommand{\familydefault}{\sfdefault}
+\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=3pt,parsep=0pt}
+
+\titleformat{\section}{\large\bfseries\color{ink}}{}{0pt}{}[\vspace{-2pt}\color{rule}\titlerule]
+\titlespacing*{\section}{0pt}{11pt}{5pt}
+
+% Replace every [Add ...] item with verified information, then remove this note.
+\newcommand{\placeholder}[1]{\textcolor{muted}{[#1]}}
+\newcommand{\entry}[4]{%
+  \textbf{#1}\hfill\textcolor{muted}{#2}\\[-1pt]
+  \textcolor{accent}{#3}\hfill\textcolor{muted}{#4}%
+}
+
+\begin{document}
+
+{\fontsize{26}{30}\selectfont\bfseries\color{ink} Đoàn Văn Tuyền}\\[2pt]
+{\large\color{accent} AI Engineer \;|\; Robotics \& Embodied Intelligence}\par
+\vspace{5pt}
+\small\color{muted}
+\placeholder{Email}\quad\textbar\quad
+\placeholder{Phone}\quad\textbar\quad
+\placeholder{City, Country}\quad\textbar\quad
+\href{https://www.linkedin.com/in/}{\placeholder{LinkedIn}}\quad\textbar\quad
+\href{https://github.com/}{\placeholder{GitHub}}
+\color{black}\normalsize
+
+\section{Profile}
+AI Engineer with a long-term interest in robotics and embodied intelligence, especially AI systems that perceive, reason, and act in the physical world.
+
+\section{Experience}
+\entry{\placeholder{Job Title}}{\placeholder{Month Year -- Present}}{\placeholder{Company / Organization}}{\placeholder{City, Country}}
+\begin{itemize}
+  \item \placeholder{Describe a system or product you built, your contribution, and its measurable result.}
+  \item \placeholder{Add a second verified accomplishment, ideally with scale, latency, quality, or business impact.}
+\end{itemize}
+
+% Duplicate the entry block above for each additional role.
+
+\section{Selected Projects}
+\entry{\placeholder{Project Name}}{\placeholder{Year}}{\placeholder{Role or project type}}{\placeholder{Repository or demo link}}
+\begin{itemize}
+  \item \placeholder{Problem, approach, tools actually used, and outcome. Include a link to code or a demo when available.}
+\end{itemize}
+
+\section{Education}
+\entry{\placeholder{Degree / Program}}{\placeholder{Graduation Year}}{\placeholder{University}}{\placeholder{City, Country}}
+\begin{itemize}
+  \item \placeholder{Relevant coursework, thesis, honors, or research (optional).}
+\end{itemize}
+
+\section{Technical Skills}
+\textbf{Programming:} \placeholder{Languages you can use professionally}\\
+\textbf{AI / ML:} \placeholder{Frameworks, model families, and methods you have used}\\
+\textbf{Engineering:} \placeholder{Deployment, data, cloud, testing, and developer tools}\\
+\textbf{Robotics (if applicable):} \placeholder{ROS, simulation, control, perception, hardware, etc.}
+
+\section{Focus Areas}
+AI engineering \textbullet\ Robotics \textbullet\ Embodied intelligence \textbullet\ \placeholder{Add specific research or application interests}
+
+\end{document}
