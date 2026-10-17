@@ -14,11 +14,10 @@ pdflatex main.tex
 
 ## Hoàn thiện nội dung
 
-Mở `main.tex`, thay các mục `[Add ...]` bằng thông tin chính xác của bạn, rồi xóa các gạch đầu dòng mẫu không áp dụng. Các placeholder có chủ ý: hiện repo chưa cung cấp thông tin liên hệ, học vấn, kinh nghiệm, dự án hoặc bộ kỹ năng đã xác thực.
+Thông tin liên hệ đã được điền. Mở `main.tex`, thay các mục `[Add ...]` bằng thông tin chính xác của bạn, rồi xóa các gạch đầu dòng mẫu không áp dụng. Các placeholder còn lại là học vấn, kinh nghiệm, dự án, kỹ năng và lĩnh vực quan tâm cụ thể.
 
 Để mình hoàn thiện CV thành bản nộp được, hãy gửi:
 
-- Email, số điện thoại, thành phố/quốc gia và link LinkedIn/GitHub.
 - Học vấn: trường, ngành, thời gian học, dự kiến/đã tốt nghiệp.
 - Kinh nghiệm làm việc hoặc nghiên cứu: vai trò, tổ chức, thời gian, 2–3 kết quả cụ thể.
 - 2–4 dự án AI/ML: bài toán, phần bạn trực tiếp làm, công nghệ thực sự dùng, kết quả và link.
